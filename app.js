@@ -27,6 +27,6 @@ function addBookToLibrary() {
 myLibrary.push(theHobbit);
 
 // Loop array
-for (const index in myLibrary) {
-    console.log(myLibrary[index].info());
+for (const i in myLibrary) {
+    console.log(myLibrary[i].info());
 }
