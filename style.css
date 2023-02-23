@@ -16,5 +16,37 @@ form {
     outline: 1px solid red;
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input input {
+    width: 75%;
+}
+
+.container .card {
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-rows: repeat(4, 40px);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.read .hidden {
+    display: none;
 }
