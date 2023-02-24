@@ -28,13 +28,13 @@
 
         <!-- MODAL -->
 
-        <div class="modal-container hidden" id="modal">
+        <div class="modal-container modal-hidden" id="modal">
             <div class="modal">
                 <button class="close-btn" id="close">
                     <i class="fa fa-times"></i>
                 </button>
 
-                <div class="modal-header">Add book to library</div>
+                <!-- <div class="modal-header">Add book to library</div> -->
 
                 <div class="modal-content">
                     <form id="form-container">
@@ -63,25 +63,27 @@
                         </div>
 
                         <div class="read">
-                            <p>Read or not?</p>
-                            <small class="hidden" id="hidden"
-                                >Please enter a response.</small
-                            >
-                            <label for="yes">Yes</label>
-                            <input
-                                type="radio"
-                                id="yes"
-                                name="read"
-                                value="true"
-                            />
+                            <p>Did you read it?</p>
+                            <div class="responses">
+                                <input
+                                    type="radio"
+                                    id="yes"
+                                    name="read"
+                                    value="true"
+                                />
+                                <label for="yes">Yes</label>
 
-                            <label for="no">No</label>
-                            <input
-                                type="radio"
-                                id="no"
-                                name="read"
-                                value="false"
-                            />
+                                <input
+                                    type="radio"
+                                    id="no"
+                                    name="read"
+                                    value="false"
+                                />
+                                <label for="no">Nope</label>
+                            </div>
+                            <small class="hidden" id="read-hidden"
+                                >Please choose a response.</small
+                            >
                         </div>
 
                         <button class="add-book" id="add-book">Add book</button>

@@ -9,10 +9,6 @@ body {
     height: 100vh;
 }
 
-div {
-    outline: 1px solid red;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -25,18 +21,39 @@ form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 12px;
+    /* gap: 12px; */
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+
+.form-input label {
+    font-weight: bold;
 }
 
 .form-input input {
-    width: 75%;
+    border: 1px solid #5e5e5e;
+    border-radius: 6px;
+    width: 65%;
+    padding: 8px 4px 8px 12px;
+    margin: 6px;
+}
+
+.form-input.error input {
+    border-color: #ff0000;
+}
+
+.form-input.error small {
+    color: #ff0000;
+    visibility: visible;
 }
 
 .form-input small {
-    color: #ff0000;
+    visibility: hidden;
+}
+
+.form-input.success input {
+    border: 1px solid green;
 }
 
 .modal-container {
@@ -48,7 +65,7 @@ form {
     bottom: 0;
 }
 
-.modal-container.hidden {
+.modal-container.modal-hidden {
     display: none;
 }
 
@@ -58,9 +75,11 @@ form {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 400px;
     animation-name: modalopen;
     animation-duration: 1s;
+    padding: 30px;
+    border-radius: 6px;
 }
 
 .modal .close-btn {
@@ -70,9 +89,12 @@ form {
     background: transparent;
     font-size: 20px;
     cursor: pointer;
+    border: 0;
+    margin: 6px;
 }
 
 .modal-header {
+    margin-bottom: 18px;
     text-align: center;
     padding: 15px;
 }
@@ -90,15 +112,51 @@ form {
 }
 
 .read {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
 }
+
 .read .hidden {
     display: none;
 }
 
+.read small {
+    color: #ff0000;
+}
+
+.read p {
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.read label {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #3c3;
+    color: rgb(0, 0, 0);
+}
+
 .add-book {
+    background: transparent;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    background-color: rgb(212, 212, 212);
     padding: 12px;
-    margin-bottom: 30px;
 }
 
 @keyframes modalopen {
