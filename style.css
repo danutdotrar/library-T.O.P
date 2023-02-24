@@ -131,6 +131,7 @@ form {
 .container {
     display: flex;
     padding: 20px;
+    gap: 40px;
 }
 
 .container .card {
@@ -140,6 +141,17 @@ form {
     background-color: rgb(212, 212, 212);
     border-radius: 6px;
     box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.6);
+}
+
+.card .remove {
+    margin: 8px;
+    cursor: pointer;
+    background: transparent;
+    background-color: #e24747;
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    padding: 8px;
 }
 
 .info {

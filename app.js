@@ -106,9 +106,9 @@ function removeCurrentBook(event) {
 
         // Find the current book index
         for (let i = 0; i < myLibrary.length; i++) {
-            if ([i] == dataBookValue) {
+            if ([i] == +dataBookValue) {
                 // Remove index book from library
-                myLibrary.splice(i, 1);
+                myLibrary.splice(i, 0);
 
                 // Remove card from DOM
                 card.remove();
