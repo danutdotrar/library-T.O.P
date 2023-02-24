@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -13,10 +14,8 @@ div {
 }
 
 form {
-    outline: 1px solid red;
     display: flex;
     flex-direction: column;
-    width: 250px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -29,10 +28,53 @@ form {
     gap: 12px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .form-input input {
     width: 75%;
+}
+
+.form-input small {
+    color: #ff0000;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-container.hidden {
+    display: none;
+}
+
+.modal {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-header {
+    text-align: center;
+    padding: 15px;
 }
 
 .container .card {
@@ -47,6 +89,24 @@ form {
     align-items: center;
 }
 
+.read {
+    margin-bottom: 30px;
+}
 .read .hidden {
     display: none;
+}
+
+.add-book {
+    padding: 12px;
+    margin-bottom: 30px;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

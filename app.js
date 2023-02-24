@@ -3,6 +3,9 @@ const hiddenRead = document.getElementById("hidden");
 const container = document.getElementById("container");
 const formContainer = document.getElementById("form-container");
 const card = document.getElementById("card");
+const closeModal = document.getElementById("close");
+const openModal = document.getElementById("open-modal");
+const modal = document.getElementById("modal");
 
 let myLibrary = [];
 let bookIndex;
@@ -68,6 +71,9 @@ function addBookToLibrary(e) {
     // Add content to container
     container.insertAdjacentHTML("beforeend", content);
     formContainer.reset();
+
+    // Close the modal
+    closeModalFunc();
 }
 
 // Remove current book from the array and DOM
@@ -93,6 +99,13 @@ function removeCurrentBook(event) {
     }
 }
 
+// Function close modal
+function closeModalFunc() {
+    modal.classList.add("hidden");
+}
+
 // Event Listeners
 addBook.addEventListener("click", addBookToLibrary);
 container.addEventListener("click", removeCurrentBook);
+openModal.addEventListener("click", () => modal.classList.remove("hidden"));
+closeModal.addEventListener("click", closeModalFunc);
