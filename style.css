@@ -66,6 +66,7 @@ form {
     width: 65%;
     padding: 8px 4px 8px 12px;
     margin: 6px;
+    font-size: 15px;
 }
 
 .form-input.error input {
@@ -130,7 +131,7 @@ form {
 
 .container {
     display: flex;
-    padding: 20px;
+    padding: 35px;
     gap: 40px;
 }
 
@@ -190,7 +191,8 @@ input[type="radio"] {
     font-size: 16px;
     background-color: rgb(212, 212, 212);
     color: rgb(0, 0, 0);
-    border-radius: 25px;
+    border-radius: 6px;
+    width: 120px;
     cursor: pointer;
     margin: 10px;
 }
@@ -208,6 +210,7 @@ input[type="radio"]:checked + label {
     border: 0;
     background-color: rgb(212, 212, 212);
     padding: 12px;
+    cursor: pointer;
 }
 
 @keyframes modalopen {
