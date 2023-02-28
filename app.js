@@ -78,7 +78,7 @@ function addBookToLibrary(e) {
         <div class="card" id="card" data-book="${bookIndex}">
         <div class="info library-title">"${title.value}"</div>
         <div class="info library-author">${author.value}</div>
-        <div class="info library-pages">${pages.value}</div>
+        <div class="info library-pages">${pages.value} pages</div>
         <div class="info library-read">${
             readAnswer ? "Read :)" : "Not read :("
         }</div>
